@@ -1,0 +1,65 @@
+
+body{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header{
+  display: flex;
+  justify-content: flex-start;
+  box-sizing: border-box;
+  align-items: center;
+  padding-top: 10px;
+  padding-bottom: 0px;
+  padding-left: 70px;
+  
+}
+header .logo{
+  transition: .3s transform cubic-bezier(.155,1.105,.295,1.12),.3s box-shadow,.3s -webkit-transform cubic-bezier(.155,1.105,.295,1.12);
+}
+header .logo:hover{
+  transform: scale(1.05);
+}
+
+header .logo h3{
+  color: #200c6e;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+header nav{
+  margin-left: 500px;
+}
+
+.nav_links{
+  list-style: none;
+}
+.nav_links ul{
+  align-items: center;
+}
+
+.nav_links li{
+  display: inline-flex;
+  font-family: 'Montserrat', sans-serif;
+  padding: 0 30px;
+  font-size: 14px;
+  font-weight: 500;
+  
+}
+
+.nav_links li a{
+  color: #200c6e;
+  cursor: pointer;
+  text-decoration: none;
+  transition: .3s transform cubic-bezier(.155,1.105,.295,1.12),.3s box-shadow,.3s -webkit-transform cubic-bezier(.155,1.105,.295,1.12);
+}
+
+
+.nav_links li a:hover{
+  transform: scale(1.05);
+  color:rgba(25, 181, 254, 1 );
+  transition: all .3s ease os;
+}

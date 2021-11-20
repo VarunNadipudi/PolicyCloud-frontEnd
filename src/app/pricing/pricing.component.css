@@ -1,0 +1,357 @@
+
+body{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+section{
+  padding: 2rem 6%; 
+}
+
+.pricing-home{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4rem;
+  background: url(../../assets/Images/homeBackground.jpg);
+}
+
+.pricing-content{
+  padding: 10rem;
+  flex: 1 1 50rem;
+}
+
+.pricing-content>#contentP1{
+  text-align: center;
+  font-family: 'Montserrat',sans-serif;
+  font-size: 50px;
+  font-weight: 700;
+  color: white;
+}
+
+.pricing-content>#contentP2{
+  text-align: center;
+  font-family: 'Montserrat',sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  color: white;
+}
+
+.pricing-cards .pricing-container{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.pricing-container .pricing{
+  flex: 1 1 16rem;
+  border: 1px solid rgba(25, 181, 254,.2);
+  box-shadow: 0 .5rem .6rem rgba(25, 181, 254,.2);
+  cursor: pointer;
+  padding: 2rem;
+  border-radius: .3rem;
+  transition: .3s transform cubic-bezier(.155,1.105,.295,1.12),.3s box-shadow,.3s -webkit-transform cubic-bezier(.155,1.105,.295,1.12);
+}
+
+.pricing-container .pricing:hover{
+  transform: scale(1.05);
+  box-shadow: 0 .5rem .6rem rgba(25, 181, 254,.2);
+}
+
+.pricing h4{
+  color: #200c6e;
+  font-family: 'Montserrat',sans-serif;
+  
+}
+
+.pricing #startsAt{
+  font-family: 'Montserrat',sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.pricing .text{
+  display: inline-flex;
+  justify-content: space-around;
+}
+
+.text>p{
+  font-family: 'Montserrat',sans-serif;
+  margin-top: 3px;
+}
+
+.pricing #h1::after{
+  content: " (Virtual Machines) ";
+  font-family: 'Montserrat',sans-serif;
+  font-size: 14px;
+  color: #666;
+}
+
+.pricing #h2::after{
+  content: " (PaaS) ";
+  font-family: 'Montserrat',sans-serif;
+  font-size: 14px;
+  color: #666;
+}
+
+.pricing #h3::after{
+  content: " (Block Storage) ";
+  font-family: 'Montserrat',sans-serif;
+  font-size: 14px;
+  color: #666;
+}
+
+#p1{
+  text-align: center;
+  font-family: 'Montserrat',sans-serif;
+  font-size: 34px;
+  font-weight: 800;
+  padding-bottom:0;
+  margin-bottom: 0;
+  color: #200c6e;
+}
+
+#pbt1{
+  text-align: center;
+  font-family: 'Montserrat',sans-serif;
+  font-size: 34px;
+  font-weight: 800;
+  padding-bottom:0;
+  margin-bottom: 0;
+  color: white;
+}
+
+#p2{
+  text-align: center;
+  font-family: 'Montserrat',sans-serif;
+  font-size: 20px;
+  padding-top:0;
+  color: #200c6e;
+}
+
+#p2 span{
+  color: rgba(25, 181, 254,1);
+}
+
+#pbt2{
+  text-align: center;
+  font-family: 'Montserrat',sans-serif;
+  font-size: 20px;
+  padding-top:0;
+  color: white;
+}
+
+.platform-b-text{
+  background: url(../../assets/Images/mainBackground.jpg);
+  padding: 4rem;
+}
+
+.platform-b-text-2{
+  /* background: #200c6e; */
+  background: url(../../assets/Images/test.svg);
+  padding: 4rem;
+}
+
+.platform-benifits{
+  padding: 2rem 14%;
+}
+
+.platform-benifits .platform-container{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.platform-container .platform{
+  flex: 1 1 30rem;
+  box-shadow: 0 .5rem 1rem rgba(25, 181, 254,.2);
+  border: 1px solid rgba(94, 143, 167, .1);
+  border-radius: .3rem;
+  text-align: center;
+  padding: 1rem 2rem;
+}
+
+.platform .text{
+  margin: 0;
+  padding: .6rem 1rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: top;
+}
+
+/* bandwidth pricing */
+
+.bandwidth-pricing{
+  padding: 2rem 14%;
+}
+
+.bandwidth-pricing .bandwidth-container{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.bandwidth-container .bandwidth{
+  flex: 1 1 15rem;
+  padding: .7rem;
+  box-shadow: 0 .3rem .4rem rgba(25, 181, 254,.2);
+  border: 1px solid rgba(94, 143, 167, .1);
+  border-radius: .3rem;
+  padding: 1rem 2rem;
+}
+
+.bandwidth p{
+  font-family: 'Montserrat',sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  margin-top: 30px;
+  color: #666;
+}
+
+#bandwidth-p2{
+  font-family: 'Montserrat',sans-serif;
+  font-size: 30px;
+  font-weight: 700;
+  color: rgb(26, 23, 228);
+}
+
+#bandwidth-p2::after{
+  content: " /GB";
+  font-family: 'Montserrat',sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: rgb(26, 23, 228);
+
+}
+
+#bandwidth-p21{
+  font-family: 'Montserrat',sans-serif;
+  font-size: 30px;
+  font-weight: 700;
+  color: green;
+}
+
+#bandwidth-p21::after{
+  content: " /GB";
+  font-family: 'Montserrat',sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: green;
+
+}
+
+#bandwidth-p22{
+  font-family: 'Montserrat',sans-serif;
+  font-size: 30px;
+  font-weight: 700;
+  color: orange;
+}
+
+#bandwidth-p22::after{
+  content: " /GB";
+  font-family: 'Montserrat',sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: orange;
+
+}
+
+#bandwidth-p23{
+  font-family: 'Montserrat',sans-serif;
+  font-size: 30px;
+  font-weight: 700;
+  color: rgb(231, 47, 15);
+}
+
+#bandwidth-p23::after{
+  content: " /GB";
+  font-family: 'Montserrat',sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: rgb(231, 47, 15);
+
+}
+
+/* faq starts here */
+.faq-container{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.faq{
+  flex: 1 1 30rem;
+}
+
+.faq .para{
+  display: flex;
+  justify-content: center;
+}
+.faq .para p{
+  text-align: center;
+  font-family: 'Montserrat',sans-serif;
+  font-size: 40px;
+  font-weight: 600;
+  padding: 0 2rem;
+  text-align: start;
+  width: 400px;
+}
+
+.question .q{
+  font-family: 'Montserrat',sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.question .a{
+  font-family: 'Montserrat',sans-serif;
+  font-size: 16px;
+  color: #666;
+}
+
+/* Footer starts here */
+
+footer{
+  display: flex;
+  justify-content: flex-start;
+  box-sizing: border-box;
+  align-items: center;
+  padding-top: 10px;
+  padding-bottom: 0px;
+  padding-left: 10px;
+  
+}
+
+.logo h3{
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+}
+nav{
+  margin-left: 500px;
+}
+
+.nav_links{
+  list-style: none;
+  align-items: center;
+}
+
+.nav_links ul{
+  align-items: center;
+}
+
+.nav_links li{
+  display: inline-flex;
+  font-family: 'Montserrat', sans-serif;
+  padding: 0 30px;
+  font-size: 14px;
+  font-weight: 500;
+  color: white; 
+  cursor: pointer;
+  transition: .3s transform cubic-bezier(.155,1.105,.295,1.12),.3s box-shadow,.3s -webkit-transform cubic-bezier(.155,1.105,.295,1.12);
+}
+
+.nav_links li:hover{
+  transform: scale(1.5);
+}

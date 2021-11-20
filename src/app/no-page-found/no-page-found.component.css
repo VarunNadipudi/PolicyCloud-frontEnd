@@ -1,0 +1,74 @@
+body{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.logo h3{
+  color: #200c6e;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.nopagefound-container{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  max-height: 100vh;
+  padding-top: 3rem;
+  padding-bottom: 5rem;
+  padding-left: 5rem;
+  padding-right: 5rem;
+}
+.nopagefound-container .nopagefound{
+  flex: 1 1 20rem;
+  margin-right: 0px;
+  max-width: 600px;
+  /* background: url(../../assets/Images/pageNotFound.svg); */
+}
+
+.nopagefound .thumbnail{
+  max-width: 600px;
+}
+.nopagefound .thumbnail img{
+  width: 100%;
+  height: 100%;
+  transition: .3s transform cubic-bezier(.155,1.105,.295,1.12),.3s box-shadow,.3s -webkit-transform cubic-bezier(.155,1.105,.295,1.12);
+  /* background: aqua; */
+}
+
+.nopagefound .thumbnail img:hover{
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
+#p1{
+  font-family: 'Montserrat',sans-serif;
+  font-size: 80px;
+  font-weight: 700;
+  text-align: start;
+  color: rgba(25, 181, 254, 1 );
+}
+
+#p2{
+  font-family: 'Montserrat',sans-serif;
+  font-size: 30px;
+  font-weight: 100;
+  text-align: start;
+}
+
+#p3{
+  font-family: 'Montserrat',sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  text-align: center;
+}
+
+#p4{
+  font-family: 'Montserrat',sans-serif;
+  font-size: 24px;
+  font-weight: 600;
+  text-align: start;
+  color: rgba(25, 181, 254, 1 );
+}

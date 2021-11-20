@@ -1,0 +1,36 @@
+<html>
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  </head>
+  <body>
+
+    <!-- Navbar starts here -->
+    <app-navigation></app-navigation>
+    <!-- Navbar ends here -->
+    
+    <div class="contact-home">
+      <div class="contact-content">
+        <p id="contentP1">How can we help you?</p>
+        <p id="contentP2">We receive a lot of mail from all over the world, to better help you please tell us something about yourself.</p>
+      </div>
+    </div>
+    
+    <div class="contact-inputs-container">
+      <div class="contact-inputs">
+        <div class="inputs">
+          <input type="text" [(ngModel)]="name" placeholder="Full Name" style="margin-top: 40px;"><br>
+          <input type="text" [(ngModel)]="email" placeholder="Email"><br>
+          <input type="text" [(ngModel)]="phone" placeholder="Phone"><br>
+          <input type="text" [(ngModel)]="company" placeholder="Company"><br>
+          <input type="text" [(ngModel)]="message" placeholder="Your message"><br>
+          <div class="btn">
+            <button (click)="registerQuery()">Send</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br><br>
+  </body>
+</html>

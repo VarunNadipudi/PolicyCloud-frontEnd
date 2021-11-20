@@ -1,0 +1,67 @@
+{
+  "policy": [
+    {
+      "id": 101,
+      "policyHolderName": "Varun",
+      "policyAmount": 1234,
+      "emiAmount": 214,
+      "nomineeName": "Varun"
+    },
+    {
+      "id": 102,
+      "policyHolderName": "SonGoku",
+      "policyAmount": 32435,
+      "emiAmount": 345,
+      "nomineeName": "Chichi"
+    },
+    {
+      "id": 103,
+      "policyHolderName": "Vegeta",
+      "policyAmount": 984523,
+      "emiAmount": 13000,
+      "nomineeName": "Bulma"
+    },
+    {
+      "id": 104,
+      "policyHolderName": "SonGohan",
+      "policyAmount": 324566,
+      "emiAmount": 9000,
+      "nomineeName": "Videl"
+    },
+    {
+      "id": 106,
+      "policyHolderName": "Varun",
+      "policyAmount": 24525,
+      "emiAmount": 23452,
+      "nomineeName": "Poojitha"
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "email": "varunnadipudi.vn@gmail.com",
+      "password": "qwerty"
+    },
+    {
+      "id": 33715,
+      "email": "vnadipudi@gmail.com",
+      "password": "12345678"
+    },
+    {
+      "id": 6071,
+      "email": "bharathi@gmail.com",
+      "password": "b"
+    },
+    {
+      "id": 43283,
+      "email": "v@gmail.com",
+      "password": "v"
+    },
+    {
+      "id": 72256,
+      "email": "jakku@gmail.com",
+      "password": "jakku"
+    }
+  ],
+  "queries": []
+}
