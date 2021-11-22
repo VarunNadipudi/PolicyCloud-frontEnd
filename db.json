@@ -27,13 +27,6 @@
       "policyAmount": 324566,
       "emiAmount": 9000,
       "nomineeName": "Videl"
-    },
-    {
-      "id": 106,
-      "policyHolderName": "Varun",
-      "policyAmount": 24525,
-      "emiAmount": 23452,
-      "nomineeName": "Poojitha"
     }
   ],
   "users": [
@@ -43,25 +36,29 @@
       "password": "qwerty"
     },
     {
-      "id": 33715,
-      "email": "vnadipudi@gmail.com",
-      "password": "12345678"
+      "id": 38024,
+      "email": "q@gmail.com",
+      "password": "q"
     },
     {
-      "id": 6071,
-      "email": "bharathi@gmail.com",
-      "password": "b"
+      "id": 35108,
+      "email": "pallav@gmail.com",
+      "password": "p"
     },
     {
-      "id": 43283,
-      "email": "v@gmail.com",
-      "password": "v"
-    },
-    {
-      "id": 72256,
-      "email": "jakku@gmail.com",
-      "password": "jakku"
+      "id": 81342,
+      "email": "Einstein",
+      "password": "qwerty"
     }
   ],
-  "queries": []
+  "queries": [
+    {
+      "name": "Albert Einstein",
+      "email": "ae@gmail.com",
+      "phone": 1234567890,
+      "company": "German Goods",
+      "message": "Nazi Nazi",
+      "id": 1
+    }
+  ]
 }

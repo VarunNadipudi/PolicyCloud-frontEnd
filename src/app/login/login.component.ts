@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { RestService } from '../rest.service';
 import { User } from '../User';
 import { EventEmitter } from '@angular/core';
+import { AuthenticationService } from '../authentication.service';
 
 @Component({
   selector: 'app-login',
@@ -11,7 +12,7 @@ import { EventEmitter } from '@angular/core';
 })
 export class LoginComponent implements OnInit {
 
-  constructor(private RouterObj:Router, private RestServiceObj:RestService) { }
+  constructor(private RouterObj:Router, private RestServiceObj:RestService, private AuthenticationServiceObj: AuthenticationService) { }
 
   ngOnInit(): void {
     this.readData();
@@ -42,26 +43,17 @@ export class LoginComponent implements OnInit {
   loadHome(){
     // this.bLoadHome = "true";
     // this.messageToEmit.emit(this.bLoadHome);
+
+    this.AuthenticationServiceObj.login();          //this makes isLoggedIn variable true in local storage
+
     console.log(this.arrUsers)
     let bFlag = false;
 
     for(var i=0; i<this.arrUsers.length; i++){
 
       if(this.arrUsers[i].email == this.email && this.arrUsers[i].password == this.password){
-        // console.log("Inside if block");
         bFlag = true;
-        // let strUrlForHome="home";
-        // this.RouterObj.navigate([strUrlForHome]);
       }
-      
-      // if(this.arrUsers[i].email != this.email && this.arrUsers[i].password != this.password){
-      //   // console.log(this.email);
-      //   // console.log(this.password);
-      //   // alert("Invalid User credentials!!!");  
-
-      //   // this.email = "";
-      //   // this.password = "";
-      // }
 
     }
 

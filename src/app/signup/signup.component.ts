@@ -21,6 +21,7 @@ export class SignupComponent implements OnInit {
   }
 
   registerUser(){
+
     let newUser = new User(this.id,this.inputEmail,this.inputPassword);
     
     if(this.inputEmail!="" && this.inputPassword!=""){
@@ -28,6 +29,7 @@ export class SignupComponent implements OnInit {
       this.RestServiceObj.insertUser(newUser).subscribe(
         (data) =>{
           let strUrlForLogin = "login";
+          alert("Sign up successful!");
           this.RouterObj.navigate([strUrlForLogin]);
         },
 
