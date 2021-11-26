@@ -31,23 +31,9 @@
   ],
   "users": [
     {
-      "id": 1,
+      "id": 76924,
+      "name": "Varun Nadipudi",
       "email": "varunnadipudi.vn@gmail.com",
-      "password": "qwerty"
-    },
-    {
-      "id": 38024,
-      "email": "q@gmail.com",
-      "password": "q"
-    },
-    {
-      "id": 35108,
-      "email": "pallav@gmail.com",
-      "password": "p"
-    },
-    {
-      "id": 81342,
-      "email": "Einstein",
       "password": "qwerty"
     }
   ],

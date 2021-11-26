@@ -17,13 +17,9 @@ export class RestService {
   userUrl = "http://localhost:3000/users";
   queryUrl = "http://localhost:3000/queries";
 
+
   getPolicyHolders(): Observable<any> {
     return this.http.get<Policy>(this.url);
-  }
-
-  //to get the users list using JSON-SERVER from db.json
-  getUsers(): Observable<any> {
-    return this.http.get<User>(this.userUrl);
   }
 
 
@@ -69,6 +65,22 @@ export class RestService {
     //console.log("The url to update is :"+updateUrl);
 
     return this.http.put(updateUrl, policy, {'headers':header});
+  }
+
+
+  // ***************** users routes starts here ********************
+
+  //to get the users list using JSON-SERVER from db.json
+  getUsers(): Observable<any> {
+    return this.http.get<User>(this.userUrl);
+  }
+
+  updateUserProfile(user:User): Observable<any> {
+    let header = {'content-type':'application/json'};
+    let id = user.id;
+    let updateUrl = this.userUrl+"/"+id;
+    console.log("The url to update is :"+updateUrl);
+    return this.http.put(updateUrl, user, {'headers':header});
   }
 
 }

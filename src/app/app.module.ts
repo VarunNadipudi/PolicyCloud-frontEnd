@@ -15,6 +15,7 @@ import { NavigationComponent } from './navigation/navigation.component';
 import { SignupComponent } from './signup/signup.component';
 import { PricingComponent } from './pricing/pricing.component';
 import { SignupGitHubComponent } from './signup-git-hub/signup-git-hub.component';
+import { ProfileComponent } from './profile/profile.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { SignupGitHubComponent } from './signup-git-hub/signup-git-hub.component
     NavigationComponent,
     SignupComponent,
     PricingComponent,
-    SignupGitHubComponent
+    SignupGitHubComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,

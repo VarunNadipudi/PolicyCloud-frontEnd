@@ -1,0 +1,93 @@
+body{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+  background: url(../../assets/Images/profileBackground.svg) no-repeat center;
+}
+
+section{
+  margin-top: 0;
+  padding: 2rem 15%;
+}
+.user-data{
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
+.profile .dp{
+  height: 80px;
+  width: 80px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 3rem;
+}
+
+.dp img{
+  height: 100%;
+  width: 100%;
+}
+.text{
+  display: block;
+  justify-content: start;
+}
+
+.text #userId{
+  font-size: 26px;
+  font-weight: 600;
+  color: #200c6e;
+  margin-bottom: 0;
+}
+.text #memberSince{
+  margin: 0;
+  font-size: 16px;
+}
+
+/* profile and activity */
+.profile-and-activity{
+  margin-top: 4px;
+  display: flex;
+  justify-content: start;
+  border-bottom: 1px solid rgba(0,0,0,.5);
+}
+
+.profile-and-activity button{
+  border: none;
+  background: none;
+  padding: 1rem 1rem;
+  font-size: 16px;
+  font-weight: 500;
+} 
+
+.content{
+  padding: 2rem 0;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(0,0,0,.1);
+  align-items: center;
+}
+
+.content #p1{
+  font-size: 17px;
+  font-weight: 600;
+}
+.content button{
+  background: none;
+  border: 2px solid rgba(25, 181, 254, 1 );
+  color: rgba(25, 181, 254, 1 );
+  font-weight: 500;
+  /* border: 2px solid rgba(33,100,227,1); */
+  /* color: rgba(33,100,227,1); */
+  padding: 4px;
+  width: 100px;
+  box-shadow: 0 .2rem 1rem rgba(0,0,0,.1);
+}
+.content button:hover{
+  background: rgba(25, 181, 254, 1 );
+  /* background: rgba(33,100,227,1); */
+  color: white;
+}
+
+
+

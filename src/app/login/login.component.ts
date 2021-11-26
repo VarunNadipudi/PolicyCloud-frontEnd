@@ -37,6 +37,8 @@ export class LoginComponent implements OnInit {
   
   }
 
+  id:number = 0;
+  name:string = "";
   email:string = "";
   password:string = "";
   
@@ -44,7 +46,7 @@ export class LoginComponent implements OnInit {
     // this.bLoadHome = "true";
     // this.messageToEmit.emit(this.bLoadHome);
 
-    this.AuthenticationServiceObj.login();          //this makes isLoggedIn variable true in local storage
+    // this.AuthenticationServiceObj.login();          //this makes isLoggedIn variable true in local storage
 
     console.log(this.arrUsers)
     let bFlag = false;
@@ -52,12 +54,17 @@ export class LoginComponent implements OnInit {
     for(var i=0; i<this.arrUsers.length; i++){
 
       if(this.arrUsers[i].email == this.email && this.arrUsers[i].password == this.password){
+        this.id = this.arrUsers[i].id;                  //saving id and name into local storage so that it is helpful later for update.
+        this.name = this.arrUsers[i].name;
         bFlag = true;
       }
 
     }
 
     if(bFlag==true){
+
+      // this.RestServiceObj.insertCurrentUser(this.email, this.password);    //sending current user to rest service so that other can use
+      this.AuthenticationServiceObj.login(this.id, this.name, this.email, this.password);          //this makes isLoggedIn variable true in local storage
       let strUrlForHome="home";
       this.RouterObj.navigate([strUrlForHome]);
     }

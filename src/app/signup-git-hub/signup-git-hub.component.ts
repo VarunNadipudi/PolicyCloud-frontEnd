@@ -13,6 +13,7 @@ export class SignupGitHubComponent implements OnInit {
   constructor(private RouterObj:Router, private RestServiceObj:RestService) { }
 
   id:number = Math.ceil(Math.random() * 100000);
+  inputName:string = "";
   inputEmail:string = "";
   inputPassword:string = "";
 
@@ -21,7 +22,8 @@ export class SignupGitHubComponent implements OnInit {
   }
 
   registerUser(){
-    let newUser = new User(this.id,this.inputEmail,this.inputPassword);
+    this.inputName = this.inputEmail;
+    let newUser = new User(this.id, this.inputName, this.inputEmail,this.inputPassword);
     
     if(this.inputEmail!="" && this.inputPassword!=""){
 

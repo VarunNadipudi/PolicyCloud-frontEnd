@@ -8,6 +8,7 @@ import { LoginComponent } from './login/login.component';
 import { NoPageFoundComponent } from './no-page-found/no-page-found.component';
 import { PoliciesComponent } from './policies/policies.component';
 import { PricingComponent } from './pricing/pricing.component';
+import { ProfileComponent } from './profile/profile.component';
 import { SignupGitHubComponent } from './signup-git-hub/signup-git-hub.component';
 import { SignupComponent } from './signup/signup.component';
 
@@ -20,6 +21,7 @@ const routes: Routes = [
   {path:'login', component:LoginComponent},
   {path:'signup', component:SignupComponent},
   {path:'signupGitHub', component:SignupGitHubComponent},
+  {path:'profile', component:ProfileComponent},
   {path:'pricing', component:PricingComponent},
   {path:'**', component:NoPageFoundComponent}
 ];

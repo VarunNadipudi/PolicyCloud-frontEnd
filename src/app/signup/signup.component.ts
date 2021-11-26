@@ -14,6 +14,7 @@ export class SignupComponent implements OnInit {
 
   id:number = Math.ceil(Math.random() * 100000);
   inputEmail:string = "";
+  inputName:string = "";
   inputPassword:string = "";
 
   ngOnInit(): void {
@@ -21,8 +22,9 @@ export class SignupComponent implements OnInit {
   }
 
   registerUser(){
+    this.inputName = this.inputEmail;       //initially setting name as emailId
 
-    let newUser = new User(this.id,this.inputEmail,this.inputPassword);
+    let newUser = new User(this.id,this.inputName, this.inputEmail, this.inputPassword);
     
     if(this.inputEmail!="" && this.inputPassword!=""){
 
