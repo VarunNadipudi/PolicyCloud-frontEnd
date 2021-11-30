@@ -9,16 +9,16 @@
     <!-- navbar starts here -->
     <app-navigation></app-navigation>
     <!-- navbar ends here -->
-    
-    <!-- profile section starts here -->
-    <section class="profile">
+
+    <!-- order table starts here -->
+    <section class="order">
       <div class="user-data">
         <div class="dp">
           <img src="../../assets/Images/userDP.png" alt="User DP">
         </div>
         <div class="userName">
           <div class="text">
-            <p id="userId">{{userEmail}}</p>
+            <p id="userId">{{currUserEmail}}</p>
             <p id="memberSince">Member since 26/11/2021</p>
           </div>
         </div>
@@ -26,57 +26,42 @@
           <button (click) ="logout()">Logout</button>
         </div>
       </div>
-      <br>
+
       <div class="profile-and-activity">
         <div class="profile-btn">
-          <button>Profile</button>
+          <button>Past Orders</button>
         </div>
       </div>
+
+      <!-- <div class="heading">
+        <p>Past Orders</p>
+      </div> -->
 
       <div class="content-container">
         <div class="content">
-          <p id="p1">Name</p>
-          <p *ngIf = "bEditName == false" id="p2">{{userName}}</p>
-          <button *ngIf = "bEditName == false" (click)="editName()">Edit</button>
-          <!-- this is the input and save option after edit -->
-          <input [(ngModel)]="userName" *ngIf = "bEditName == true" type="text" placeholder="UserName" style="width: 250px;">
-          <button *ngIf = "bEditName == true" (click)="saveName()">Save</button>
-        </div>
-
-        <div class="content">
-          <p id="p1">Email Id</p>
-          <p *ngIf = "bEditEmail == false" id="p2">{{userEmail}}</p>
-          <button *ngIf = "bEditEmail == false" (click)="editEmail()">Edit</button>
-          <!-- this is the input and save option after edit -->
-          <input  [(ngModel)]="userEmail" *ngIf = "bEditEmail == true"  type="text" placeholder="Email" style="width: 250px;">
-          <button *ngIf = "bEditEmail == true" (click)="saveEmail()">Save</button>
-        </div>
-
-        <div class="content">
-          <p id="p1">Password</p>
-          <p *ngIf = "bEditPassword == false" id="p2">{{userPassword}}</p>
-          <button *ngIf = "bEditPassword == false" (click)="editPassword()">Edit</button>
-          <!-- this is the input and save option after edit -->
-          <input  [(ngModel)]="userPassword" *ngIf = "bEditPassword == true"  type="text" placeholder="New Password" style="width: 250px;">
-          <button *ngIf = "bEditPassword == true" (click)="savePassword()">Save</button>
-        </div>
-
-        <div class="content">
-          <p id="p1">Cart</p>
-          <!-- <p id="p2">{{userName}}'s Cart</p> -->
-          <button (click)="viewCart()" id="view">View</button>
-        </div>
-
-        <div class="content">
-          <p id="p1">Previous Orders</p>
-          <!-- <p id="p2">{{userName}}'s Past Orders</p> -->
-          <button (click)="viewOrders()" id="view">View</button>
+          <table class="table table-hover">
+            <thead class="table-info">
+              <tr>
+                <td>Order No.</td>
+                <td>Plan Name</td>
+                <td>Plan Cost</td>
+              </tr>
+            </thead>
+            <tbody *ngFor = "let order of arrOrders">
+              <tr>
+                <td>{{order.id}}</td>
+                <td>{{order.planName}}</td>
+                <td>{{order.planCost | currency : 'INR'}}</td>
+              </tr>
+            </tbody>
+          </table>
         </div>
       </div>
-      <br><br><br>
     </section>
-    <!-- profile section ends here -->
-
+    <!-- order table ends here -->  
+    <br><br><br><br><br>
+    <br><br><br><br><br>
+    <br><br><br><br><br>
 
     <!--Footer starts here-->
     <section class="footer" style="background-color: #200c6e;padding: 2rem 6%;">

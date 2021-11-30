@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { AuthenticationService } from '../authentication.service';
 import { RestService } from '../rest.service';
 import { User } from '../User';
 
@@ -10,7 +11,7 @@ import { User } from '../User';
 })
 export class ProfileComponent implements OnInit {
 
-  constructor(private RestServiceObj: RestService, private RouterObj: Router) { }
+  constructor(private RestServiceObj: RestService, private RouterObj: Router, private AuthenticationServiceObj: AuthenticationService) { }
 
   userId:any = localStorage.getItem('currentUserId');
   userName:any = localStorage.getItem('currentUserName');
@@ -20,6 +21,12 @@ export class ProfileComponent implements OnInit {
 
   ngOnInit(): void {
   
+  }
+
+  logout(){
+    let strUrlForLogin = "login";
+    this.AuthenticationServiceObj.logout();
+    this.RouterObj.navigate([strUrlForLogin]);
   }
 
 
@@ -91,7 +98,13 @@ export class ProfileComponent implements OnInit {
   }
 
   viewOrders(){
+    let strUrlForOrders = "orders";
+    this.RouterObj.navigate([strUrlForOrders]);
+  }
 
+  viewCart(){
+    let strUrlForCart = "cart";
+    this.RouterObj.navigate([strUrlForCart]);
   }
 
 }

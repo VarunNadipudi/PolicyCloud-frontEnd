@@ -141,6 +141,27 @@ section{
   color: white;
 }
 
+.add-to-cart button{
+  font-family: 'Montserrat',sans-serif;
+  margin-top: 1rem;
+  width: 100%;
+  background: none;
+  border: 2px solid rgba(25, 181, 254, 1 );
+  color: rgba(25, 181, 254, 1 );
+  font-weight: 500;
+  border-radius: .3rem;
+  padding: 6px;
+  box-shadow: 0 .2rem 1rem rgba(0,0,0,.1);
+}
+
+.add-to-cart button:hover{
+  background: rgba(25, 181, 254, 1 );
+  color: white;
+}
+
+
+/* platform benefits start here */
+
 .platform-b-text{
   background: url(../../assets/Images/mainBackground.jpg);
   padding: 4rem;

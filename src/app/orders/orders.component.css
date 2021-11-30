@@ -6,18 +6,19 @@ body{
   background: url(../../assets/Images/profileBackground.svg) no-repeat center;
 }
 
-section {
+section{
   margin-top: 0;
-  padding: 2rem 15%;
+  padding:2rem 15%;
 }
 
 .user-data{
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  margin-bottom: 30px;
 }
 
-.profile .dp{
+.order .dp{
   height: 80px;
   width: 80px;
   border-radius: 50%;
@@ -26,7 +27,7 @@ section {
   transition: .3s transform cubic-bezier(.155,1.105,.295,1.12),.3s box-shadow,.3s -webkit-transform cubic-bezier(.155,1.105,.295,1.12);
 }
 
-.profile .dp:hover{
+.order .dp:hover{
   transform: scale(1.05);
   cursor: pointer;
 }
@@ -76,7 +77,8 @@ section {
   margin-top: 4px;
   display: flex;
   justify-content: flex-start;
-  border-bottom: 1px solid rgba(0,0,0,.5);
+  /* border-bottom: 1px solid rgba(0,0,0,.5); */
+  margin-bottom: 30px;
 }
 
 .profile-and-activity button{
@@ -87,60 +89,43 @@ section {
   font-weight: 500;
 } 
 
-.content{
-  padding: 2rem 0;
-  display: flex;
-  justify-content: space-between;
-  border-bottom: 1px solid rgba(0,0,0,.1);
-  align-items: center;
+/* .heading>p{
+  font-size: 50px;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 30px;
+  color: #200c6e;
 }
 
-/* transition: .3s transform cubic-bezier(.155,1.105,.295,1.12),.3s box-shadow,.3s -webkit-transform cubic-bezier(.155,1.105,.295,1.12);
-.content:hover{
-  transform: scale(1.05);
-  box-shadow: 0 .5rem 1rem rgba(0,0,0,.2);
-  cursor: pointer;
-  border-radius: .3rem;
+.no-body{
+  border: none;
+  border-bottom: none;
 } */
 
-.content #p1{
-  font-size: 17px;
+thead td{
+  font-size: 20px;
   font-weight: 600;
-}
-
-.content button{
-  background: none;
-  border: 2px solid rgba(25, 181, 254, 1 );
-  color: rgba(25, 181, 254, 1 );
-  font-weight: 500;
-  border-radius: .3rem;
-  /* border: 2px solid rgba(33,100,227,1); */
-  /* color: rgba(33,100,227,1); */
-  padding: 4px;
-  width: 100px;
-  box-shadow: 0 .2rem 1rem rgba(0,0,0,.1);
-}
-
-#view{
-  background: none;
-  border: 2px solid rgb(78, 206, 4);
-  color: rgb(78, 206, 4);
-  font-weight: 500;
-  border-radius: .3rem;
-  padding: 4px;
-  width: 100px;
-  box-shadow: 0 .2rem 1rem rgba(0,0,0,.1);
-}
-.content button:hover{
+  padding: 1rem 3rem;
+  color: white;
   background: rgba(25, 181, 254, 1 );
-  /* background: rgba(33,100,227,1); */
-  color: white;
 }
 
-#view:hover{
-  background: rgb(78, 206, 4);
-  color: white;
+tbody td{
+  font-size: 16px;
+  padding: 1rem 3rem;
+  color: #200c6e;
 }
+
+/* tbody tr{
+  transition: .3s transform cubic-bezier(.155,1.105,.295,1.12),.3s box-shadow,.3s -webkit-transform cubic-bezier(.155,1.105,.295,1.12);
+}
+
+tbody tr:hover{
+  transform: scale(1.05);
+  cursor: pointer;
+  box-shadow: 0 .2rem 1rem rgba(0,0,0,.2);
+} */
+
 
 
 /* Footer starts here */

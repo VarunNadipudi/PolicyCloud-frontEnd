@@ -35,6 +35,18 @@
       "name": "Varun Nadipudi",
       "email": "varunnadipudi.vn@gmail.com",
       "password": "qwerty"
+    },
+    {
+      "id": 51408,
+      "name": "Vishal Nadipudi",
+      "email": "onairx1@gmail.com",
+      "password": "donkey.com"
+    },
+    {
+      "id": 45105,
+      "name": "Bharathi Nadipudi",
+      "email": "bharathi@gmail.com",
+      "password": "bharathi"
     }
   ],
   "queries": [
@@ -45,6 +57,22 @@
       "company": "German Goods",
       "message": "Nazi Nazi",
       "id": 1
+    }
+  ],
+  "cart": [
+    {
+      "id": 92364,
+      "planName": "Droplets",
+      "planCost": 370,
+      "userEmail": "varunnadipudi.vn@gmail.com"
+    }
+  ],
+  "orders": [
+    {
+      "id": 101,
+      "planName": "Kubernetes",
+      "planCost": 740,
+      "userEmail": "varunnadipudi.vn@gmail.com"
     }
   ]
 }

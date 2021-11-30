@@ -16,6 +16,8 @@ import { SignupComponent } from './signup/signup.component';
 import { PricingComponent } from './pricing/pricing.component';
 import { SignupGitHubComponent } from './signup-git-hub/signup-git-hub.component';
 import { ProfileComponent } from './profile/profile.component';
+import { OrdersComponent } from './orders/orders.component';
+import { CartComponent } from './cart/cart.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +32,9 @@ import { ProfileComponent } from './profile/profile.component';
     SignupComponent,
     PricingComponent,
     SignupGitHubComponent,
-    ProfileComponent
+    ProfileComponent,
+    OrdersComponent,
+    CartComponent
   ],
   imports: [
     BrowserModule,
