@@ -37,7 +37,7 @@ export class CartComponent implements OnInit {
   }
 
   logout(){
-    this.RouterObj.navigate(["login"])
+    this.RouterObj.navigate(["login"]);
   }
 
   deleteItem(id:number){
@@ -56,6 +56,11 @@ export class CartComponent implements OnInit {
         console.log(error);
       }
     );
+  }
+
+  loadPayment(){
+    var strUrlForPayment = "payment"
+    this.RouterObj.navigate([strUrlForPayment]);
   }
 
 }

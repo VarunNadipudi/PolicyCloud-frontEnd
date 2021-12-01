@@ -18,6 +18,7 @@ import { SignupGitHubComponent } from './signup-git-hub/signup-git-hub.component
 import { ProfileComponent } from './profile/profile.component';
 import { OrdersComponent } from './orders/orders.component';
 import { CartComponent } from './cart/cart.component';
+import { PaymentsComponent } from './payments/payments.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { CartComponent } from './cart/cart.component';
     SignupGitHubComponent,
     ProfileComponent,
     OrdersComponent,
-    CartComponent
+    CartComponent,
+    PaymentsComponent
   ],
   imports: [
     BrowserModule,

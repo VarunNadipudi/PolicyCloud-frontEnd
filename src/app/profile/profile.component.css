@@ -56,7 +56,7 @@ section {
 }
 
 .logout-btn button{
-  background: none;
+  background: white;
   padding: 4px;
   width: 100px;
   border: 2px solid rgba(236,91,110,1);
@@ -81,7 +81,7 @@ section {
 
 .profile-and-activity button{
   border: none;
-  background: none;
+  background: white;
   padding: 1rem 1rem;
   font-size: 16px;
   font-weight: 500;
@@ -109,7 +109,7 @@ section {
 }
 
 .content button{
-  background: none;
+  background: white;
   border: 2px solid rgba(25, 181, 254, 1 );
   color: rgba(25, 181, 254, 1 );
   font-weight: 500;
@@ -122,7 +122,7 @@ section {
 }
 
 #view{
-  background: none;
+  background: white;
   border: 2px solid rgb(78, 206, 4);
   color: rgb(78, 206, 4);
   font-weight: 500;

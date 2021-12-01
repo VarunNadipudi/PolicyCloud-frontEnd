@@ -61,9 +61,21 @@
   ],
   "cart": [
     {
-      "id": 92364,
-      "planName": "Droplets",
-      "planCost": 370,
+      "id": 11618,
+      "planName": "Managed Kuberbetes",
+      "planCost": 740,
+      "userEmail": "varunnadipudi.vn@gmail.com"
+    },
+    {
+      "id": 65737,
+      "planName": "Managed Databases",
+      "planCost": 1110,
+      "userEmail": "varunnadipudi.vn@gmail.com"
+    },
+    {
+      "id": 85545,
+      "planName": "Container Registry",
+      "planCost": 0,
       "userEmail": "varunnadipudi.vn@gmail.com"
     }
   ],

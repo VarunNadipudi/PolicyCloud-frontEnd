@@ -61,7 +61,7 @@ section{
 }
 
 .logout-btn button{
-  background: none;
+  background: white;
   padding: 4px;
   width: 100px;
   border: 2px solid rgba(236,91,110,1);
@@ -87,7 +87,7 @@ section{
 
 .profile-and-activity button{
   border: none;
-  background: none;
+  background: white;
   padding: 1rem 1rem;
   font-size: 16px;
   font-weight: 500;
@@ -108,7 +108,7 @@ section{
 }
 
 .content button{
-  background: none;
+  background: white;
   padding: 5px;
   width: 100px;
   border: 2px solid rgba(236,91,110,1);
@@ -120,6 +120,27 @@ section{
 
 .content button:hover{
   background: rgba(236,91,110,1);
+  color: white;
+}
+
+.confirm-order{
+  display: flex;
+  justify-content: center;
+  margin-top: 4rem;
+}
+
+.confirm-order button{
+  background: white;
+  padding: 7px 25px;
+  border: 2px solid rgba(25, 181, 254, 1 );
+  color: rgba(25, 181, 254, 1 );
+  font-weight: 500;
+  box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+  border-radius: .3rem;
+}
+
+.confirm-order button:hover{
+  background: rgba(25, 181, 254, 1 );
   color: white;
 }
 

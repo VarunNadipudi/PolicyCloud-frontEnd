@@ -10,49 +10,68 @@
     <app-navigation></app-navigation>
     <!-- navbar ends here -->
 
-    <!-- order table starts here -->
-    <section class="order">
-      <div class="user-data">
-        <div class="dp">
-          <img src="../../assets/Images/userDP.png" alt="User DP">
-        </div>
-        <div class="userName">
-          <div class="text">
-            <p id="userId">{{currUserEmail}}</p>
-            <p id="memberSince">Member since 26/11/2021</p>
+    <section class="main-content">
+      <div class="content-container">
+        <div class="content1">
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="flexRadioDefault" id="PayPal">
+            <label class="form-check-label" for="PayPal">
+              Pay<span style="color:rgba(25, 181, 254, 1 )">Pal</span>
+            </label>
+          </div>
+          <hr>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="flexRadioDefault" id="CreditorDebit">
+            <label class="form-check-label" for="CreditorDebit" style="font-weight: 400;font-style:normal;font-size:14px">
+              Credit or debit card
+            </label>
+          </div>
+          <label for="cardNumber" style="font-size: 10px;font-weight:600;margin-top:1rem">Card number</label><br>
+          <input type="text" placeholder="" id="cardNumber" placeholder="0000 0000 0000">
+
+          <br><br>
+          <div class="container">
+            <div class="expiry-date">
+              <label for="expiryDate" style="font-size: 10px;font-weight:600">Expiry date</label><br>
+              <input type="text" id="expiryDate" placeholder="MM/YY"> 
+            </div>
+  
+            <div class="cvv">
+              <label for="cvv" style="font-size: 10px;font-weight:600">CVV</label><br>
+              <input type="text" id="cvv" placeholder=". . ."> 
+            </div>
+          </div>
+          <br><br>
+          
+          <div class="bottom-text">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(165, 163, 163)" class="bi bi-lock-fill" viewBox="0 0 16 16" style="margin-right: 5px;">
+              <path d="M8 1a2 2 0 0 1 2 2v4H6V3a2 2 0 0 1 2-2zm3 6V3a3 3 0 0 0-6 0v4a2 2 0 0 0-2 2v5a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2z"/>
+            </svg><p>Your transaction is secured with SSL encryption</p>
           </div>
         </div>
-        <div class="logout-btn">
-          <button (click) ="logout()">Logout</button>
+  
+        <div class="content2">
+          <div class="cost-container">
+            <p id="cost-heading">Order Cost</p>
+            <p id="cost">Rs {{cost}}</p>
+          </div>
+          <p id="billing">Billing Address</p>
+
+          <!-- country input -->
+          <label for="country" style="font-size: 10px;font-weight:600;margin-top:1rem">Country</label><br>
+          <input type="text" placeholder="" id="country" placeholder=" India">
+
+          <!-- Address input -->
+          <label for="address" style="font-size: 10px;font-weight:600;margin-top:1rem">Address</label><br>
+          <textarea name="address" id="address" cols="30" rows="2"></textarea>
+          <br><br>
+          <div class="btn-container">
+            <button>Pay</button>
+          </div>
         </div>
       </div>
-
-      <div class="profile-and-activity">
-        <div class="profile-btn">
-          <button>Cart</button>
-        </div>
-      </div>
-
-      <!-- <div class="heading">
-        <p>Past Orders</p>
-      </div> -->
-
-      <div class="content-container" *ngFor = "let item of arrCartItems">
-        <div class="content">
-          <p id="p1">{{item.planName}}</p>
-          <p id="p2">{{item.planCost | currency : 'INR'}}</p>
-          <button (click)="deleteItem(item.id)">Delete</button>
-        </div>
-      </div>
-      
-      <div *ngIf = "arrCartItems.length != 0" class="confirm-order">
-        <button (click)="loadPayment()">Confirm order and Proceed to Payment</button>
-      </div>
-
-
     </section>
-    <!-- order table ends here -->  
-    <br><br><br>
+
     <!--Footer starts here-->
     <section class="footer" style="background-color: #200c6e;padding: 2rem 6%;">
       <footer>
@@ -105,4 +124,5 @@
     <!-- Footer ends here -->
   </body>
 </html>
+
 

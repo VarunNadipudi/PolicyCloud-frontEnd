@@ -1,0 +1,222 @@
+body{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+  background: url(../../assets/Images/profileBackground.svg) no-repeat center;
+  /* background: rgb(248, 251, 253); */
+}
+
+.main-content{
+  margin-top: 0;
+  padding:2rem 10%;
+  min-height: 80vh;
+}
+
+.content-container{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  
+}
+
+.content1{
+  flex: 1 1 30px;
+  padding: 2rem;
+  background: white;
+  margin: 4rem 1rem;
+  border-radius: .3rem;
+  box-shadow: 0 .3rem 1rem rgba(0,0,0,.1);
+  
+}
+
+.content2{
+  flex: 1 1 30px;
+  padding: 2rem;
+  background: white;
+  margin: 4rem 1rem;
+  border-radius: .3rem;
+  box-shadow: 0 .3rem 1rem rgba(0,0,0,.1);
+}
+
+.form-check-input{
+  margin-top: 4px;
+}
+.form-check-label{
+  font-weight: 800;
+  font-size: 16px;
+  font-style: italic;
+  color: rgb(1, 55, 102);
+}
+
+#cardNumber{
+  width: 100%;
+  margin-top: 2px;
+  padding: 4px 20px;
+  border: 2px solid rgba(25, 181, 254, 1 );
+  border-radius: .3rem;
+  font-size: 16px;
+}
+#cardNumber::placeholder{
+  color:rgb(165, 163, 163);
+  font-size: 16px;
+}
+
+.container{
+  display: flex;
+  justify-content: space-between;
+  padding: 0;
+}
+
+#expiryDate{
+  width: 100%;
+  margin-top: 2px;
+  padding: 4px 20px;
+  border: 2px solid rgba(25, 181, 254, 1 );
+  border-radius: .3rem;
+  font-size: 16px;
+}
+
+#expiryDate::placeholder{
+  color:rgb(165, 163, 163);
+  font-size: 14px;
+}
+
+#cvv{
+  width: 100%;
+  margin-top: 2px;
+  padding: 4px 20px;
+  border: 2px solid rgba(25, 181, 254, 1 );
+  border-radius: .3rem;
+  font-size: 16px;
+}
+
+#cvv::placeholder{
+  color:rgb(165, 163, 163);
+  font-size: 16px;
+}
+
+.bottom-text{
+  display: flex;
+  justify-content: flex-start;
+}
+.bottom-text p{
+  font-size: 14px;
+  color: rgb(165, 163, 163);
+}
+
+.cost-container{
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(0,0,0,.2);
+}
+
+#cost{
+  font-weight: 600;
+  margin: 0;
+}
+
+#cost::after{
+  content: '/month';
+  font-size: 12px;
+  color: #666;
+}
+
+#billing{
+  margin-top: 12px;
+  margin-bottom: 4px;
+  font-size: 14px;
+}
+
+#country{
+  width: 100%;
+  margin-top: 2px;
+  padding: 4px 20px;
+  border: 2px solid rgba(25, 181, 254, 1 );
+  border-radius: .3rem;
+  font-size: 16px;
+  margin-bottom: 2px;
+}
+#country::placeholder{
+  color:rgb(165, 163, 163);
+  font-size: 16px;
+}
+
+#address{
+  width: 100%;
+  margin-top: 2px;
+  padding: 4px 20px;
+  border: 2px solid rgba(25, 181, 254, 1 );
+  border-radius: .3rem;
+  font-size: 16px;
+}
+
+.btn-container{
+  display: flex;
+  justify-content: center;
+}
+.btn-container button{
+  width: 50%;
+  background: rgb(78, 206, 4);
+  padding: 5px 25px;
+  color: white;
+  border: none;
+  font-weight: 500;
+  box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+  border-radius: .3rem;
+  transition: .3s transform cubic-bezier(.155,1.105,.295,1.12),.3s box-shadow,.3s -webkit-transform cubic-bezier(.155,1.105,.295,1.12);
+}
+
+.btn-container button:hover{
+  transform: scale(1.05);
+}
+
+
+/* Footer starts here */
+
+
+footer{
+  display: flex;
+  justify-content: flex-start;
+  box-sizing: border-box;
+  align-items: center;
+  padding-top: 10px;
+  padding-bottom: 0px;
+  padding-left: 10px;
+  
+}
+
+.logo h3{
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+}
+nav{
+  margin-left: 500px;
+}
+
+.nav_links{
+  list-style: none;
+  align-items: center;
+}
+
+.nav_links ul{
+  align-items: center;
+}
+
+.nav_links li{
+  display: inline-flex;
+  font-family: 'Montserrat', sans-serif;
+  padding: 0 30px;
+  font-size: 14px;
+  font-weight: 500;
+  color: white; 
+  cursor: pointer;
+  transition: .3s transform cubic-bezier(.155,1.105,.295,1.12),.3s box-shadow,.3s -webkit-transform cubic-bezier(.155,1.105,.295,1.12);
+}
+
+.nav_links li:hover{
+  transform: scale(1.5);
+}
+
