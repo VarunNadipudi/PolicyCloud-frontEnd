@@ -56,24 +56,30 @@ export class ProfileComponent implements OnInit {
   // ********************* If Email or password is updated navigate to login page and login again
 
   editEmail(){
-    this.bEditEmail = true;
+    if(confirm("All the cart Items and orders related to the email will be lost!")){
+      this.bEditEmail = true;
+    }
   }
 
   saveEmail(){
     this.bEditEmail = false;
-    localStorage.setItem('currentUserEmail', this.userEmail);
-    var user = new User(this.userId, this.userName, this.userEmail, this.userPassword);
-    this.RestServiceObj.updateUserProfile(user).subscribe(
-      (data) =>{
-        alert("Email is Updated!");
-        let strUrlForLogin = "login";
-        this.RouterObj.navigate([strUrlForLogin]);
-      },
+    if(localStorage.getItem('currentUserEmail') != this.userEmail){         //if the updated is not equal to existing then only save
 
-      (error) =>{
-        console.log(error);
-      }
-    );
+      localStorage.setItem('currentUserEmail', this.userEmail);
+      var user = new User(this.userId, this.userName, this.userEmail, this.userPassword);
+      this.RestServiceObj.updateUserProfile(user).subscribe(
+        (data) =>{
+          alert("Email is Updated!");
+          let strUrlForLogin = "login";
+          this.RouterObj.navigate([strUrlForLogin]);
+        },
+
+        (error) =>{
+          console.log(error);
+        }
+      );
+
+    }
   }
 
   editPassword(){
@@ -82,19 +88,21 @@ export class ProfileComponent implements OnInit {
 
   savePassword(){
     this.bEditPassword = false;
-    localStorage.setItem('currentUserPassword', this.userPassword);
-    var user = new User(this.userId, this.userName, this.userEmail, this.userPassword);
-    this.RestServiceObj.updateUserProfile(user).subscribe(
-      (data) =>{
-        alert("Password is Updated!");
-        let strUrlForLogin = "login";
-        this.RouterObj.navigate([strUrlForLogin]);
-      },
+    if(localStorage.getItem('currentUserPassword') != this.userPassword){
+      localStorage.setItem('currentUserPassword', this.userPassword);
+      var user = new User(this.userId, this.userName, this.userEmail, this.userPassword);
+      this.RestServiceObj.updateUserProfile(user).subscribe(
+        (data) =>{
+          alert("Password is Updated!");
+          let strUrlForLogin = "login";
+          this.RouterObj.navigate([strUrlForLogin]);
+        },
 
-      (error) =>{
-        console.log(error);
-      }
-    );
+        (error) =>{
+          console.log(error);
+        }
+      );
+    }
   }
 
   viewOrders(){

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <!-- navbar starts here -->
+    <!-- <app-navigation></app-navigation> -->
+    <!-- navbar ends here -->
+
+    <section class="order-confirmation">
+      <div class="box-container">
+        <div class="box">
+
+          <div class="user-data">
+            <div class="dp" (click)="loadProfile()">
+              <img src="../../assets/Images/userDP.png" alt="User DP">
+            </div>
+            <p id="userId">{{currUserEmail}}</p>
+          </div>
+
+          <h5>Order Details</h5>
+          <hr>
+
+          <!-- contents start here -->
+          <div class="content-container" *ngFor = "let item of arrCartItems">
+            <div class="content">
+              <p id="p1">{{item.planName}}</p>
+              <p id="p2">{{item.planCost | currency : 'INR'}}</p>
+            </div>
+          </div>
+          <br><br>
+          <div class="content" style="border-bottom: none;">
+            <p id="p3">Total</p>
+            <p id="p4">{{cost | currency : 'INR'}}</p>
+          </div>
+          <button (click)="loadHome()">Go to Home</button>
+          <!-- content ends here -->
+
+        </div>
+      </div>
+    </section>
+    
+  </body>
+</html>

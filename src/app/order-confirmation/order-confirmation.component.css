@@ -1,0 +1,107 @@
+body{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+  /* background: url(../../assets/Images/profileBackground.svg) no-repeat center; */
+  background: url('../../assets/Images/aboutBackground.gif');
+}
+
+section{
+  padding: 2rem 6%;
+  min-height: 100vh;
+}
+
+.box-container{
+  display: flex;
+  justify-content: center;
+}
+
+.box{
+  margin-top: 30px;
+  background: white;
+  min-width: 500px;
+  min-height: 400px;
+  border-radius: .3rem;
+  box-shadow: 0 .5rem 1rem rgba(0,0,0,.1), 0 0 1rem rgba(0,0,0,.1);
+  padding: 2rem 3rem;
+}
+.box>h5{
+  text-align: center;
+  color: #200c6e;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.user-data{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.dp{
+  height: 80px;
+  width: 80px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 3rem;
+  transition: .3s transform cubic-bezier(.155,1.105,.295,1.12),.3s box-shadow,.3s -webkit-transform cubic-bezier(.155,1.105,.295,1.12);
+}
+.dp:hover{
+  transform: scale(1.05);
+  cursor: pointer;
+}
+
+.dp img{
+  height: 100%;
+  width: 100%;
+}
+
+#userId{
+  font-size: 14px;
+  font-weight: 600;
+  color: #200c6e;
+  margin-bottom: 0;
+}
+
+/* contents of order starts here */
+.content{
+  padding: 1rem 0;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0;
+  border-bottom: 1px solid rgba(0,0,0,.1);
+  align-items: center;
+}
+
+.content #p1{
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.content #p3{
+  font-size: 20px;
+  font-weight: 600;
+}
+.content #p4{
+  font-size: 20px;
+  font-weight: 600;
+}
+
+button{
+  width: 100%;
+  height: 40px;
+  border-radius: .3rem;
+  border: none;
+  background: rgba(236,91,110,1);
+  color: white;
+  font-size: 17px;
+  font-weight: 600;
+  transition: .3s transform cubic-bezier(.155,1.105,.295,1.12),.3s box-shadow,.3s -webkit-transform cubic-bezier(.155,1.105,.295,1.12);
+}
+
+button:hover{
+  transform: scale(1.02);
+  box-shadow: 0 .2rem 1rem rgba(0,0,0,.2);
+}

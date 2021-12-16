@@ -7,6 +7,7 @@ import { ContactComponent } from './contact/contact.component';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { NoPageFoundComponent } from './no-page-found/no-page-found.component';
+import { OrderConfirmationComponent } from './order-confirmation/order-confirmation.component';
 import { OrdersComponent } from './orders/orders.component';
 import { PaymentsComponent } from './payments/payments.component';
 import { PoliciesComponent } from './policies/policies.component';
@@ -29,6 +30,7 @@ const routes: Routes = [
   {path:'orders', component:OrdersComponent},
   {path:'cart', component:CartComponent},
   {path:'payment', component:PaymentsComponent},
+  {path:'orderConfirmation', component:OrderConfirmationComponent},
   {path:'**', component:NoPageFoundComponent}
 ];
 let strUrlForSignup = "signupGitHub";

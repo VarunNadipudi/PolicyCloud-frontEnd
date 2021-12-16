@@ -15,6 +15,7 @@ export class ContactComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  id:number = Math.ceil(Math.random() * 100000);
   name:string = "";
   email:string = "";
   phone:string = "";
@@ -28,7 +29,7 @@ export class ContactComponent implements OnInit {
   }
 
   registerQuery(){
-    let newQuery = new Query(this.name, this.email, parseInt(this.phone), this.company, this.message);
+    let newQuery = new Query(this.id, this.name, this.email, parseInt(this.phone), this.company, this.message);
     if(this.name!="" && this.email!="" && this.phone!="" && this.company!="" && this.message!=""){
       this.RestServiceObj.insertQuery(newQuery).subscribe(
         (data) =>{

@@ -15,27 +15,27 @@ export class LoginComponent implements OnInit {
   constructor(private RouterObj:Router, private RestServiceObj:RestService, private AuthenticationServiceObj: AuthenticationService) { }
 
   ngOnInit(): void {
-    this.readData();
+    // this.readData();
   }
 
   // @Output() messageToEmit = new EventEmitter();
   // bLoadHome = "false";
 
-  arrUsers: User[] = [];          //stores the users list
+  //arrUsers: User[] = [];          //stores the users list
 
-  readData(){
+  // readData(){
 
-    this.RestServiceObj.getUsers().subscribe(
-      (data) =>{
-        this.arrUsers = data;
-      },
+  //   this.RestServiceObj.getUsers().subscribe(
+  //     (data) =>{
+  //       this.arrUsers = data;
+  //     },
 
-      (error) =>{
-        console.log(error);
-      }
-    );
+  //     (error) =>{
+  //       console.log(error);
+  //     }
+  //   );
   
-  }
+  // }
 
   id:number = 0;
   name:string = "";
@@ -43,37 +43,26 @@ export class LoginComponent implements OnInit {
   password:string = "";
   
   loadHome(){
-    // this.bLoadHome = "true";
-    // this.messageToEmit.emit(this.bLoadHome);
 
-    // this.AuthenticationServiceObj.login();          //this makes isLoggedIn variable true in local storage
+    this.RestServiceObj.getUser(this.email, this.password).subscribe(
+      (data)=>{
+        console.log(data);
+        if(data.length > 0){
+          this.AuthenticationServiceObj.login(data[0].id, data[0].name, data[0].email, data[0].password);          //this makes isLoggedIn variable true in local storage
+          let strUrlForHome="home";
+          this.RouterObj.navigate([strUrlForHome]);
+        }
+        else{
+          alert("Invalid User credentials!!!");  
+          this.email = "";
+          this.password = "";
+        }
+      },
 
-    console.log(this.arrUsers)
-    let bFlag = false;
-
-    for(var i=0; i<this.arrUsers.length; i++){
-
-      if(this.arrUsers[i].email == this.email && this.arrUsers[i].password == this.password){
-        this.id = this.arrUsers[i].id;                  //saving id and name into local storage so that it is helpful later for update.
-        this.name = this.arrUsers[i].name;
-        bFlag = true;
+      (error)=>{
+        console.log(error);
       }
-
-    }
-
-    if(bFlag==true){
-
-      // this.RestServiceObj.insertCurrentUser(this.email, this.password);    //sending current user to rest service so that other can use
-      this.AuthenticationServiceObj.login(this.id, this.name, this.email, this.password);          //this makes isLoggedIn variable true in local storage
-      let strUrlForHome="home";
-      this.RouterObj.navigate([strUrlForHome]);
-    }
-    else{
-      alert("Invalid User credentials!!!");  
-
-      this.email = "";
-      this.password = "";
-    }
+    );
   }
 
   // bGoogle = "false";

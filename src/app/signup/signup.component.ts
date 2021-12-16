@@ -22,23 +22,54 @@ export class SignupComponent implements OnInit {
   }
 
   registerUser(){
-    this.inputName = this.inputEmail;       //initially setting name as emailId
-
-    let newUser = new User(this.id,this.inputName, this.inputEmail, this.inputPassword);
     
     if(this.inputEmail!="" && this.inputPassword!=""){
 
-      this.RestServiceObj.insertUser(newUser).subscribe(
-        (data) =>{
-          let strUrlForLogin = "login";
-          alert("Sign up successful!");
-          this.RouterObj.navigate([strUrlForLogin]);
-        },
+      var regexp = new RegExp(/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/);
 
-        (error) =>{
-          console.log(error);
-        }
-      );
+      //validating the email with regex if true then only attempting to signup else throwing invalid email.
+      if(regexp.test(this.inputEmail)){
+        this.inputName = this.inputEmail;       //initially setting name as emailId
+        let newUser = new User(this.id,this.inputName, this.inputEmail, this.inputPassword);
+
+        //first checking whether the user exists or not, then only registering the user
+        this.RestServiceObj.userExists(this.inputEmail).subscribe(
+          (data)=>{
+            if(data == "false"){
+              this.RestServiceObj.insertUser(newUser).subscribe(
+                (data) =>{
+                  alert(data);
+                  
+                  let strUrlForLogin = "login";
+                  this.RouterObj.navigate([strUrlForLogin]);
+                },
+        
+                (error) =>{
+                  console.log(error);
+                }
+              );
+            }
+            else{
+              alert("User already exists!");
+              this.inputEmail = "";
+              this.inputPassword = "";
+
+              let strUrlForLogin = "login"
+              this.RouterObj.navigate([strUrlForLogin]);
+            }
+          },
+
+          (error)=>{
+            console.log(error);
+          }
+        );
+      }
+      else{
+        alert("Invalid Email Address!");
+        this.inputEmail = "";
+        this.inputPassword = "";
+      }
+
     }
   }
 

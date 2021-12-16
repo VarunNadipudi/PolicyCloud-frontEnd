@@ -48,7 +48,7 @@ export class PricingComponent implements OnInit {
       var item = new Order(id, planName, planCost, this.currentUserEmail);
       this.RestServiceObj.insertCartItem(item).subscribe(
         (data) =>{
-          alert("plan added to cart!");
+          alert(data);
         },
 
         (error) =>{

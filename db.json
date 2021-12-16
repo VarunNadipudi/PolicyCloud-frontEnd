@@ -47,6 +47,12 @@
       "name": "Bharathi Nadipudi",
       "email": "bharathi@gmail.com",
       "password": "bharathi"
+    },
+    {
+      "id": 57777,
+      "name": "Rohith Kumar",
+      "email": "Rohith@gmail.com",
+      "password": "qwerty"
     }
   ],
   "queries": [
@@ -77,6 +83,24 @@
       "planName": "Container Registry",
       "planCost": 0,
       "userEmail": "varunnadipudi.vn@gmail.com"
+    },
+    {
+      "id": 5070,
+      "planName": "Managed Kuberbetes",
+      "planCost": 740,
+      "userEmail": "Rohith@gmail.com"
+    },
+    {
+      "id": 14387,
+      "planName": "Managed Databases",
+      "planCost": 1110,
+      "userEmail": "Rohith@gmail.com"
+    },
+    {
+      "id": 96048,
+      "planName": "Container Registry",
+      "planCost": 0,
+      "userEmail": "Rohith@gmail.com"
     }
   ],
   "orders": [
